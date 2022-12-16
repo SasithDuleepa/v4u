@@ -1,0 +1,108 @@
+
+.frame1{
+    display: flex;
+    margin-top: 50px;
+    margin-left: 100px;
+    list-style: none;
+}
+.pic{
+    height: 100px;
+    width:100px;
+    display: flex;
+    border: 2pc;
+    border-color: white;
+    border-radius: 50%;
+}
+.info{
+    margin-left: 10px;
+    display: inline-flex;
+    color: white;
+    font-size: 20px;
+    display:list-item;
+    
+
+    
+}
+#name{
+     font-size: 20px;
+}
+#books{
+    font-size: 15px;
+}
+#followers{
+    font-size: 15px;
+
+}
+#following{
+    font-size: 15px;
+
+}
+
+.frame2{
+    color: white;
+    font-size: 20px;
+    
+    margin-top: 50px;
+    margin-left: 100px;
+    list-style: none;
+    
+}
+
+
+.edit_profile{
+    color:white;
+    background-color:transparent;
+    box-sizing: content-box;
+    border-radius: 15%;
+    border: 0px;
+}
+.edit_profile:focus{
+    background-color: rgba(247, 247, 245, 0.94);
+    color:black;
+    border: none;
+}
+#pwd{
+    color:white;
+    background-color:transparent;
+    box-sizing: content-box;
+    border-radius: 15%;
+    border: 0px;
+}
+#social_profile{
+    color:white;
+    background-color:transparent;
+    box-sizing: content-box;
+    border-radius: 15%;
+    border: 0px;
+}
+#my_books{
+    color:white;
+    background-color:transparent;
+    box-sizing: content-box;
+    border-radius: 15%;
+    border: 0px;
+    
+}
+#hr {
+    width: 150px;
+    height: 1px;
+    margin-left: 0px;
+    margin-right: auto;
+    background-color:white;
+    border: 0 none;
+  }
+#delete_acc{
+    color: rgb(157, 23, 23);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.content1{
+    height: 800px;
+    width: 700px;
+    color: #000;
+    background:transparent;
+    margin-left: 400px;
+    margin-top: -350px;
+
+}
