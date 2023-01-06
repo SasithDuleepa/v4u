@@ -15,6 +15,8 @@ import Password from "./pages/profile/password/password";
 import Social_profiles from "./pages/profile/social profiles/social_profiles";
 import My_books from "./pages/profile/my books/my_books";
 import Register from "./pages/register/register";
+import Item from "./component/items-view/item";
+import Reccomend from "./component/recomended-book/rec-book";
 
 import background from "./background.jpg";
 
@@ -34,6 +36,8 @@ function App () {
        <Route path="/pages/social_profiles" exact><Social_profiles/></Route>
        <Route path="/pages/my_books" exact><My_books/></Route>
        <Route path="/pages/register" exact><Register/></Route>
+       <Route path="/item" exact><Item/></Route>
+       <Route path="/recommend" exact><Reccomend/></Route>
        
 
       </Switch>
