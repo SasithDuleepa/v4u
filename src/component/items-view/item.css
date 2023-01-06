@@ -1,0 +1,29 @@
+.contain{
+    height: 350px;
+    width: 250px;
+    background-color: white;
+    display:flexbox;
+    font-display:initial;
+
+    }
+.picture{
+    height: 200px;
+    width: 200px;
+    background-color: darkmagenta;
+    margin: 9%;
+    }
+#space{
+    height: 5px;
+}
+#title-box{
+    color: brown;
+    max-height: 10px;   
+    margin-top: -10%;
+}
+
+.btn{
+    margin-left: 10%;
+    font-size: 20px;
+    padding-bottom: 10%;
+    
+}
