@@ -3,21 +3,27 @@ import React, { useState } from "react";
 import axios from 'axios';
 
 
+
+import book from '../book.jpg';
+
+axios.defaults.baseURL = 'http://localhost:3005';
+
+
+
+
 function Item(props){
     const[pic, setpic] = useState();
     const[title, settitle] = useState('sasasasass');
-    const[link , setlink] = useState();
+    const[link , setlink] = useState("");
+    
+
+    const data = {"title": props.title
+        // data to be sent to the server
+      };
 
     const clicked=()=>{
-
-        axios.post('http://localhost:3001/history',{"title":title})
-        .then(function (response) {
-            console.log(response);
-          })
-
-    }
-  
-    
+        axios.post('/server/route', data)
+    }    
 
 
     return(
@@ -26,18 +32,16 @@ function Item(props){
 
             <div className="contain">
                 <div id='space'> </div>
-                <div className="picture">
+                <img src={book} className="picture"/>
 
-                </div>
+                
                
                 <br/>
-
-                <p style={{width:"270px"}} id='title-box' >
-                {props.title}
-
-
-                </p>
-                <a className='btn' href='' onClick={""}>See more...</a>
+                
+                
+                <div  id='title-box' >
+                {props.title} </div>
+                <div id='btnseemore' onClick={clicked}  >See more...</div>
                 
                 
             </div>

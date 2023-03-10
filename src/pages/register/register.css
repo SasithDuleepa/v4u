@@ -1,25 +1,45 @@
-#frame{
-    display:flexbox;
-    
-    width: 450px;    
-    height: 500px;
+#frame_1{
+    display:flexbox;    
+    width: 500px;    
+    height: 700px;
     background-color: transparent;    
-    backdrop-filter: blur(35px);
-    margin-left: 100px;
-    margin-top: 100px;
-    margin-bottom: 50px;
+    backdrop-filter: blur(100px);
+    margin-left: 200px;
+    margin-top: 50px;
+    margin-bottom: 100px;
     border-radius: 3%;
     
   }
+  #set1{
+    display: flex;
+  }
+#img{
+  margin-top: 30%;
+  margin-left: 70%;
+  width: 500px;
+  height: 500px;
+}
 
+  #bgimg{
+    margin-top: 10%;
+    margin-left: 20%;
+  }
 
-  #email{
+  #title{
+    font-size: 40px;
+    color:white;
+    margin-left: 25%;
+    margin-top: 30px;
+    margin-bottom: 20%;
+  }
+
+  #fname{
     color:white;
     margin-left: 20px;
-    margin-top: -25px;
+    margin-top: 30px;
   }
-  #mail{
-    width:400px;
+  #first_name{
+    width:450px;
     height: 20px;
     background:transparent;
     border:none;
@@ -28,7 +48,93 @@
     align-items: center;
     font-size: 25px;
     margin-left: 20px;
-    margin-top: -35px;
+    margin-top: 20px;
   }  
 
+  #lname{
+    color:white;
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+  #last_name{
+    width:450px;
+    height: 20px;
+    background:transparent;
+    border:none;
+    border-bottom: 1px solid white;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  #email2{
+    color:white;
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+  #mail{
+    width:450px;
+    height: 20px;
+    background:transparent;
+    border:none;
+    border-bottom: 1px solid white;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    margin-left: 20px;
+    margin-top:20px;
+  }
+
+  #pwd{
+    color:white;
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+  #password{
+    width:450px;
+    height: 20px;
+    background:transparent;
+    border:none;
+    border-bottom: 1px solid white;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
  
+  #users{
+    color:white;
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+  #user{
+    width:450px;
+    height: 20px;
+    background:transparent;
+    border:none;
+    border-bottom: 1px solid white;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  #btn{
+    padding-bottom: 0px;
+    background-color: rgb(8, 4, 44);
+    color: aliceblue;
+    font-size: 15px;    
+    margin-left: 40%;
+    margin-top: 5%;
+    width: 90px;
+    height: 30px;
+    border-radius: 64px;
+    border: 0px;
+    margin-bottom: 5%;
+    
+    
+  }

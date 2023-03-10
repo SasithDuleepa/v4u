@@ -5,6 +5,8 @@ import {useState} from 'react';
 import { Icon } from 'react-icons-kit'
 import {eyeOff} from 'react-icons-kit/feather/eyeOff'
 import {eye} from 'react-icons-kit/feather/eye'
+import singin from "./Signin.png"
+import Navibar3 from "../navbar/navbar3";
 
 function Login() {
     const[type,setType]=useState('password');
@@ -21,24 +23,26 @@ function Login() {
       }
     }
   
-    return (
+    return (<div>
+      <Navibar3/>
       
         <div id='login'>
-          <div id="frame">
-            <p id="head">Sing-in with</p>
+          
+          
+          <div className="frame__1">
+            <p id="head1">Sing-in with</p>
             <p id="v4u">V4U</p>
             
-            <p id="email">E-mail</p>
-            <input type="text" id="mail"></input>
-            <p id="password">password</p>
+            <p id="email">E-mail:</p>
+            <input type="text" id="mail1"></input>
+
+            <p id="password1">password</p>
   
-            <div className='input-field' >
-            <input type={type}/>
-              
+            <div  >
+              <input className='input-field' type={type}/>              
               <span onClick={handleToggle}><Icon icon={icon} size={25}/></span>
-              
-            
             </div>
+
             <div>
               <br/>
             </div>
@@ -49,8 +53,13 @@ function Login() {
             </div>
             <h1>or</h1>
             <p id= "notacc">Don't have an account? 
-            <a id="signup" href='./signup'>sign up</a></p>
+            <a id="signup" href='../pages/register'>sign up</a></p>
           </div>
+
+
+
+          <div id="bgimg"><img src={singin}/></div>
+        </div>
         </div>
            
     );

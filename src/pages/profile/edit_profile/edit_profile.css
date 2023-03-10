@@ -1,19 +1,24 @@
 
+.frame1{
+    margin-top: 5px;
+}
+
 .pic2{
     display: flex;
-min-height: 50px;
-max-height: 50px;
-min-width: 50px;
-min-height: 50px;
+min-height: 70px;
+max-height: 70px;
+min-width: 70px;
+min-height: 70px;
 border-radius: 50%;
-margin-left: -90px;
-margin-top: 5px;
+margin-left: 0px;
+margin-top: 10px;
+margin-bottom: 10px;
 
 }
 
 .cam{
     
-    background-color: white;
+    background-color: rgb(243, 239, 239);
     width: 50px;
     height: 20px;
     margin-left: 10px;
@@ -23,20 +28,29 @@ margin-top: 5px;
 }
 
 
-.content{
-    height: 10px;
-    margin-left: 10px;
+
+p{
+    font-size: 20px;
     color: white;
-    font-weight: bold;
+    height: 10px;
+    margin-top: -40px;
+    margin-left: 2%;
+    text-align: left;
 }
 input{
-    margin-bottom: 2mm;
+    margin-bottom: 0mm;
     width: 550px;
     height: 25px;
     border-radius: 2%;
     border: 1px;
     
 }
+#name{
+    font-size: 10px;
+}
+
+
+
 #update{
     padding-bottom: 0px;
     background-color: rgb(8, 4, 44);

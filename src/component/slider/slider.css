@@ -11,7 +11,7 @@
     position: relative;
     text-align: center;
   }
-  .container { margin: 0 auto; padding:0px; width: 80%; height: 50%; color: #333; background: #419be0; }
+  .container { margin: 0% auto; padding:10px; width: 80%; height: 50%; color: #333; background: #419be0; }
 
   .variable-width .slick-slide p {
     background: rgb(212, 218, 31);

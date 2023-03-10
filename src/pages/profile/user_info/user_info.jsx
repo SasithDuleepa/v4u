@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import "./user_info.css"
 import man from "./man.jpg"
 import Edit_profile from "../edit_profile/edit_profile";
@@ -8,18 +9,20 @@ import My_books from '../my books/my_books';
 
 import Navibar from "../../navbar/navbar";
 
-import {BrowserRouter as Router,Route} from "react-router-dom";
+import {BrowserRouter as Router,Route, Switch} from "react-router-dom";
 
 class User_info extends Component{
     constructor(props) {
         super(props);
-        this.state = {
+        this.state = {message:<Edit_profile/>
+         
              
         }
       }
      
       updateContent_1 = () => {
-          this.setState({ message:<Edit_profile/> });
+          this.setState({ message:<Edit_profile/>});
+          
       }  
       updateContent_2 = () => {
         this.setState({ message:<Password/> });
@@ -32,10 +35,12 @@ class User_info extends Component{
     }   
       render() {
         return(
-          <div>
+        <div className='main_frame'>
            <div>
-          <Router>    
+          <Router> 
+            <Switch>   
                <Route  exact><Navibar/></Route>
+            </Switch>   
          </Router>
          </div>
 
@@ -45,26 +50,29 @@ class User_info extends Component{
          <div className="frame1">    
             <img src={man} className="pic" />
             <div className="info">                
-                <div id="name">Steeven Jonny</div>
+                <div id="name_1">Steeven Jonny</div>
                 <div id="books">Books-100</div>
                 <div id="followers">Followers-500</div>
                 <div id="following">Following-20</div>
             </div>
          </div>
-         <div className="frame2">
-            <button className="edit_profile" onClick={this.updateContent_1}>edit_profile</button><div></div>
-            <button id="pwd" onClick={this.updateContent_2}>password</button><div></div>
+         <div className="frame_2">
+          
+            <button className="edit_profile" onClick={this.updateContent_1}>   edit_profile</button><br/>
+            <button id="pwd_" onClick={this.updateContent_2}>password</button><br/>
             <button id="social_profile" onClick={this.updateContent_3}>social profile</button><div></div>
             
             
-            <a id="delete_acc"href="">Delete account</a>
+            
          </div>
 
     
 
-         <div className=" content1">
-         <Router>    
+         <div className=" content_frame">
+         <Router>
+            <Switch>    
                <Route  exact>{ this.state.message }</Route>
+            </Switch>
           </Router>
             
 

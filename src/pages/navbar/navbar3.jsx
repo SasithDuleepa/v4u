@@ -5,7 +5,7 @@ import User_info from "../profile/user_info/user_info";
 
 import { BsFillBellFill,BsFillChatLeftTextFill,BsCart3,BsSearch } from "react-icons/bs";
 
-function Navibar(props){
+function Navibar3(props){
     return(<nav className="nav">
     <p href="/" className="site-title">V4U</p>
     
@@ -24,16 +24,14 @@ function Navibar(props){
     <a href="/pricing"><BsFillChatLeftTextFill /></a>
     </li>
     <li>
-    <a href="../cart"><BsCart3/></a>
+    <a href="/pricing"><BsCart3/></a>
     </li>
     
-    <a href="../pages/user_info">
-    <img src={man} className="img" alt="userinfo" />
-    </a>
+    
     </div>
     
 </nav>
     )
 };
 
-export default Navibar;
+export default Navibar3;

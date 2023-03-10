@@ -1,10 +1,10 @@
-
-import React, { useEffect, useState } from "react";
-import SimpleSlider from "../slider/slider";
+import React, {useState} from "react";
 import axios from "axios";
+import SimpleSlider from "../slider/slider";
 
-function Newbooks(){
-    axios.get('http://localhost:3001/newbook')
+function Editors_choice(){
+
+    axios.get('http://localhost:3001/editor_choice')
   .then(res => {
     
     setTitle1(res.data[0].title)
@@ -32,7 +32,7 @@ function Newbooks(){
 
     return(
         <div>
-            <SimpleSlider
+             <SimpleSlider
             t1={title1}
             t2={title2}
             t3={title3}
@@ -44,5 +44,10 @@ function Newbooks(){
 
         </div>
     )
+
+
+
+   
 }
-export default Newbooks;
+
+export default Editors_choice;

@@ -17,6 +17,10 @@ import My_books from "./pages/profile/my books/my_books";
 import Register from "./pages/register/register";
 import Item from "./component/items-view/item";
 import Reccomend from "./component/recomended-book/rec-book";
+import Newbooks from "./component/new_books/newBooks";
+import AddCart from "./pages/AddCart/AddCart";
+import PostForm from "./pages/register/register";
+import Cart from "./pages/cart/cart";
 
 import background from "./background.jpg";
 
@@ -25,9 +29,10 @@ function App () {
     
     
     <Router>    
-     <Switch>       
+     <Switch>   
+          
        <Route path="/pages/login" exact> <Login/>  </Route>
-       <Route path="/pages/home" exact> <Home/>  </Route>
+       <Route path="/" exact> <Home/>  </Route>
        <Route path="/pages/navbar" exact><Navibar/></Route>
        <Route path="/pages/deleteacc" exact><Deleteacc/></Route>
        <Route path="/pages/user_info" exact><User_info/></Route>
@@ -35,11 +40,12 @@ function App () {
        <Route path="/pages/password" exact><Password/></Route>
        <Route path="/pages/social_profiles" exact><Social_profiles/></Route>
        <Route path="/pages/my_books" exact><My_books/></Route>
-       <Route path="/pages/register" exact><Register/></Route>
+       <Route path="/pages/register" exact><PostForm/></Route>
        <Route path="/item" exact><Item/></Route>
        <Route path="/recommend" exact><Reccomend/></Route>
+       <Route path="/newbooks" exact><Newbooks/></Route>
        
-
+       
       </Switch>
     </Router>
     

@@ -1,10 +1,11 @@
 import React from "react";
+import './social_profiles.css'
 
 function Social_profiles(){
     return(
     <div>
         <div className="content">
-          <p id ="">Linkedin:</p>
+          <p id ="linkedin">Linkedin:</p>
             <input id="old_password"></input>
 
             <p id="location">Twitter:</p>

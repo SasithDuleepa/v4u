@@ -1,4 +1,10 @@
 
+
+.main_frame{
+    display: contents;
+   
+}
+
 .frame1{
     display: flex;
     margin-top: 50px;
@@ -23,57 +29,51 @@
 
     
 }
-#name{
-     font-size: 20px;
-}
-#books{
-    font-size: 15px;
-}
-#followers{
-    font-size: 15px;
 
-}
-#following{
-    font-size: 15px;
 
-}
-
-.frame2{
+.frame_2{
     color: white;
-    font-size: 20px;
-    
-    margin-top: 50px;
+    font-size: 40px;
+    font-weight: bold;   
+    margin-top: 150px;
     margin-left: 100px;
     list-style: none;
     
 }
+#name_1{
+    font-size: 30px;
+}
 
 
 .edit_profile{
+    font-size: medium;
     color:white;
     background-color:transparent;
     box-sizing: content-box;
     border-radius: 15%;
     border: 0px;
+
 }
-.edit_profile:focus{
+/*.edit_profile:focus{
     background-color: rgba(247, 247, 245, 0.94);
     color:black;
     border: none;
-}
-#pwd{
-    color:white;
-    background-color:transparent;
-    box-sizing: content-box;
-    border-radius: 15%;
-    border: 0px;
+}*/
+#pwd_{
+    font-size: medium;
+   background-color: transparent;
+   border-color: transparent;
+   color: white;
+    
 }
 #social_profile{
+    font-size: medium;
     color:white;
     background-color:transparent;
     box-sizing: content-box;
     border-radius: 15%;
     border: 0px;
+    
 }
 #my_books{
     color:white;
@@ -88,7 +88,7 @@
     height: 1px;
     margin-left: 0px;
     margin-right: auto;
-    background-color:white;
+    background-color:rgb(239, 29, 173);
     border: 0 none;
   }
 #delete_acc{
@@ -97,12 +97,12 @@
     font-size: 15px;
 }
 
-.content1{
-    height: 800px;
-    width: 700px;
-    color: #000;
-    background:transparent;
-    margin-left: 400px;
-    margin-top: -350px;
+.content_frame{
+    height: 900px;
+    width: 900px;
+    background-color:transparent;
+    margin-left: 600px;
+    margin-top: -250px;
+   
 
 }

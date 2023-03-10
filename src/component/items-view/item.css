@@ -1,11 +1,16 @@
 .contain{
-    height: 350px;
+    height: 300px;
     width: 250px;
     background-color: white;
-    display:flexbox;
-    font-display:initial;
+    border-radius: 10px;
+    
+    
+    
 
     }
+ #icon{
+    margin-left: 2%;
+ }   
 .picture{
     height: 200px;
     width: 200px;
@@ -16,14 +21,26 @@
     height: 5px;
 }
 #title-box{
-    color: brown;
-    max-height: 10px;   
-    margin-top: -10%;
+    
+    width: 210px;
+    height: 50px;   
+    margin-top: -6%;
+    margin-left: 8%;
+    
+}
+.text{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.btn{
-    margin-left: 10%;
-    font-size: 20px;
-    padding-bottom: 10%;
+#btnseemore{
+
+    margin-left: 60%;
+    margin-top: 0%;
+    
+    background: transparent;
+    
+    
     
 }

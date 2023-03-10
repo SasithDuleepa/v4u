@@ -18,12 +18,12 @@ function Edit_profile(){
 
             <div className="content">
 
-            <p id="name">Name:</p>
+            <p id="name@">Name:</p>
             <input id="name_input"></input>
 
-            <p id="nic">NIC:</p>
+            <p id="nic@">NIC:</p>
             <input id="nic-input"></input>
-            <p></p>
+            
 
             <p id ="">Email:</p>
             <input id="email_input"></input>
