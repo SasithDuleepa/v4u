@@ -32,7 +32,7 @@ function App () {
      <Switch>   
           
        <Route path="/pages/login" exact> <Login/>  </Route>
-       <Route path="/" exact> <Home/>  </Route>
+       <Route path="/pages/home" exact> <Home/>  </Route>
        <Route path="/pages/navbar" exact><Navibar/></Route>
        <Route path="/pages/deleteacc" exact><Deleteacc/></Route>
        <Route path="/pages/user_info" exact><User_info/></Route>

@@ -4,40 +4,56 @@ import "./register.css"
 import regpic from "./regpic.png"
 import Navibar3 from '../navbar/navbar3';
 
+import { useHistory } from 'react-router-dom';
+
+
+
 function PostForm() {
-    const url ="http://localhost:8080/"
+    const[response , setResponse] = useState('dsdf')
+    const history = useHistory();
+    const url ="http://localhost:8080/register"
     const [data,setData] = useState({        
         first_name:"",
         last_name:"",
-        email:"",
+        mail:"",
         password:"",
-        user:""
+        user:"author"
 
     })
 
-    function submit(e){        
-        Axios.post(url,{            
-            first_name:data.first_name,
-            last_name:data.last_name,
-            email:data.email,
-            password:data.password,
-            user:data.user
-        })
-        .then(res=>{
-            console.log(res.data)
-        })
+    const submit = async (e)=>{  
+        e.preventDefault();
+        try{
+            const resp =await Axios.post(url,{            
+                first_name:data.first_name,
+                last_name:data.last_name,
+                email:data.mail,
+                password:data.password,
+                user:data.user
+            });
+           
+            console.log(resp.data)
+            history.push("../v4u");
+        } catch(error){console.log(error);
+        }     
+        // history.push("../v4u"); // Navigate to home page
+       
+       
     }
 
     function handle(e){
         const newdata={...data}
         newdata[e.target.id]= e.target.value
         setData(newdata)
+        
     }
+  
 
     return (
         <div>
             <Navibar3/>
         <div id='set1'>
+            {response}
         <div id='frame_1'>
             <form onSubmit={(e)=> submit(e)}>
                 <p id='title'>Registration</p>
@@ -47,16 +63,26 @@ function PostForm() {
                 <p id='lname'>Last name</p>
                 <input onChange={(e)=>handle(e)} id="last_name" value={data.last_name} type="text"></input>
                 <p id='email2'>E-mail</p>
-                <input onChange={(e)=>handle(e)} id="mail" value={data.email}  type="text"></input>
+                <input onChange={(e)=>handle(e)} id="mail" value={data.mail}  type="text"></input>
                 <p id='pwd'>Password</p>
                 <input onChange={(e)=>handle(e)} id="password" value={data.password} type="text"></input>
-                <p id='users'>User</p>
-                <input onChange={(e)=>handle(e)} id="user" value={data.user} type="text"></input>
+                <p id='user'>User</p>
+                <br/>
+               
+
+                <select value={data.user} id="user"  onChange={(e)=>handle(e)}>
                 
-                <button id='btn'>Submit</button>
+                   
+                   <option id="author">author</option>
+                   <option id="reader">reader</option>
+                   <option ide="admin">admin</option>
+                </select>
+                <br/>
+                
+                <button id='btn' >Submit</button>
                 <h1>or</h1>
-            <p id= "notacc">Already have an account? 
-            <a id="signup" href='../pages/login'>Login</a></p>
+            {/* <p id= "notacc">Already have an account? 
+            <a id="signup" href='../pages/login'>Login</a></p> */}
             </form>
             
         </div>
