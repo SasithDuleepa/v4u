@@ -17,12 +17,15 @@ function Home(){
         <Navibar2/>
         <img src={book1} className="book1"/>
         <div style={{display:"flex"}}>
-        <p id='recbook'>recommended books for you!!!   <a id="recseemore">see more...</a></p>
-       
+        <p id='recbook'>recommended books for you!!!   <a id="recseemore">see more...</a></p>       
         </div>
+
         <div className='recc'>
         <Reccomend />
         </div>
+
+
+        
         <div id="newbooks">new books!!!    <a id="recseemore">see more...</a></div>
         <div className='recc'>
         <Newbooks top_books =""/>

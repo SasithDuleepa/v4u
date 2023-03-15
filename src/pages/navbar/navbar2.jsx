@@ -22,7 +22,8 @@ function Navibar2(props){
             },
           })
           .then((response) => {
-            console.log(response.data);
+            console.log(response.data)
+            setUser(response.data);
           });
       }, []); 
 

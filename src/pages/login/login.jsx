@@ -51,7 +51,8 @@ function Login() {
         console.log("log in success!!!")
         Cookies.set('myCookie',JSON.stringify(
           
-          resp.data
+            {login:true,
+            token: resp.data}
         ))
         console.log(resp.status);
           console.log(resp.data);
