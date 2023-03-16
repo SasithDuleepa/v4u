@@ -1,0 +1,13 @@
+#recbook{
+   
+    font-size: 30px;
+    font-weight: 1000;
+    margin-top: 3%;
+    margin-left: 3%;
+    width:50%;
+}
+#recseemore{
+    font-size: 25px;
+    margin-left: 5%;
+    color: blue;
+}

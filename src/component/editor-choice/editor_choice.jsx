@@ -31,7 +31,8 @@ function Editors_choice(){
 
 
     return(
-        <div>
+        <div className='recc'>
+          <div id="editors_choice">editors choice!!!   <a id="recseemore">see more...</a></div>
              <SimpleSlider
             t1={title1}
             t2={title2}

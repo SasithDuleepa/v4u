@@ -51,7 +51,7 @@ function PostForm() {
 
     return (
         <div>
-            <Navibar3/>
+            
         <div id='set1'>
             {response}
         <div id='frame_1'>
@@ -81,8 +81,8 @@ function PostForm() {
                 
                 <button id='btn' >Submit</button>
                 <h1>or</h1>
-            {/* <p id= "notacc">Already have an account? 
-            <a id="signup" href='../pages/login'>Login</a></p> */}
+            <p id= "notacc">Already have an account? 
+            <a id="signup" href='../pages/login'>Login</a></p>
             </form>
             
         </div>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SimpleSlider from "../slider/slider";
 import axios from "axios";
+import "./rec-book.css"
 
 function Reccomend(){
     axios.get('http://localhost:3001')
@@ -34,7 +35,8 @@ function Reccomend(){
     const[title8, setTitle8 ]=useState('Loading..');
 
     return(
-        <div>
+        <div className='recc'>
+          <p id='recbook'>recommended books for you!!!   <a id="recseemore">see more...</a></p>
         <SimpleSlider
         t1={title1}
         t2={title2}

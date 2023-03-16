@@ -31,7 +31,8 @@ function Newbooks(){
 
 
     return(
-        <div>
+        <div className='recc'>
+          <div id="newbooks">new books!!!    <a id="recseemore">see more...</a></div>
             <SimpleSlider
             t1={title1}
             t2={title2}

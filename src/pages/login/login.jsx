@@ -70,7 +70,7 @@ function Login() {
    
   
     return (<div>
-      <Navibar3/>
+      
       
         <div id='login'>
           

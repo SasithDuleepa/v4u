@@ -21,12 +21,14 @@ import Newbooks from "./component/new_books/newBooks";
 import AddCart from "./pages/AddCart/AddCart";
 import PostForm from "./pages/register/register";
 import Cart from "./pages/cart/cart";
-
+import Navibar2 from "./pages/navbar/navbar2";
 import background from "./background.jpg";
+import Addbook from "./pages/add book/addbook";
 
 function App () {
   return(
-    
+    <>
+    <Navibar2/>
     
     <Router>    
      <Switch>   
@@ -41,6 +43,7 @@ function App () {
        <Route path="/pages/social_profiles" exact><Social_profiles/></Route>
        <Route path="/pages/my_books" exact><My_books/></Route>
        <Route path="/pages/register" exact><PostForm/></Route>
+       <Route path="/pages/addbook" exact><Addbook/></Route>
        <Route path="/item" exact><Item/></Route>
        <Route path="/recommend" exact><Reccomend/></Route>
        <Route path="/newbooks" exact><Newbooks/></Route>
@@ -51,7 +54,7 @@ function App () {
     
     
   
-    
+    </>
   
   );
 

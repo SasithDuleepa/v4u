@@ -1,37 +1,55 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import SimpleSlider from "../../component/slider/slider";
 import Reccomend from "../../component/recomended-book/rec-book";
 import Navibar2 from "../navbar/navbar2";
 import Newbooks from "../../component/new_books/newBooks";
 import Editors_choice from "../../component/editor-choice/editor_choice";
+import axios, { Axios } from 'axios'
 
 
 import './home.css'
 import book1 from '../../component/book1.png';
 
+
 function Home(){
+    const [recbookenable, setRecbookenable] =useState(false); // Replace with your condition
+
+    useEffect(() => {
+        axios.get('http://localhost:8080/user', {
+            withCredentials: true,
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          })
+          .then((response) => {
+            console.log(response.data)
+            if(response.data){setRecbookenable(true);}else{setRecbookenable(false);}
+            
+          });
+      }, []); 
     
     return(
         
         <div id="frame1">
-        <Navibar2/>
+      
         <img src={book1} className="book1"/>
-        <div style={{display:"flex"}}>
-        <p id='recbook'>recommended books for you!!!   <a id="recseemore">see more...</a></p>       
-        </div>
+        
+           
+   
 
         <div className='recc'>
-        <Reccomend />
+        {recbookenable ? <Reccomend /> : null}
+        
         </div>
 
 
         
-        <div id="newbooks">new books!!!    <a id="recseemore">see more...</a></div>
+       
         <div className='recc'>
         <Newbooks top_books =""/>
         </div>
 
-        <div id="editors_choice">editors choice!!!   <a id="recseemore">see more...</a></div>
+        
         <div className='recc'>
         <Editors_choice/>
         </div>
