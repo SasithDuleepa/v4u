@@ -1,0 +1,31 @@
+#footer{
+    display: flex;
+    
+    width: 100%;
+    height: 17pc;
+    background-color:  rgb(4, 14, 116);
+}
+#set_1{
+    text-align: left;
+    margin-left: 15px;
+    
+
+}
+#_v4u{
+    padding-top: 30px;
+    font-size: 50px;
+    font-weight: 500;
+}
+#store{
+    margin-top: 50px;
+}
+#about{
+    
+    font-size: 30px;
+    color: white;
+}
+
+#set_2{
+    /* text-align: right; */
+    margin-left: 70%;
+}

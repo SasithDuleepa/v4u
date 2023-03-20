@@ -24,6 +24,7 @@ import Cart from "./pages/cart/cart";
 import Navibar2 from "./pages/navbar/navbar2";
 import background from "./background.jpg";
 import Addbook from "./pages/add book/addbook";
+import MyProfile from "./pages/profile/my_profile/myProfile";
 
 function App () {
   return(
@@ -34,9 +35,10 @@ function App () {
      <Switch>   
           
        <Route path="/pages/login" exact> <Login/>  </Route>
-       <Route path="/pages/home" exact> <Home/>  </Route>
+       <Route path="/" exact> <Home/>  </Route>
        <Route path="/pages/navbar" exact><Navibar/></Route>
        <Route path="/pages/deleteacc" exact><Deleteacc/></Route>
+       <Route path='/pages/myprofile' exact><MyProfile/></Route>
        <Route path="/pages/user_info" exact><User_info/></Route>
        <Route path="/pages/edit_profile" exact><Edit_profile/></Route>
        <Route path="/pages/password" exact><Password/></Route>
@@ -44,7 +46,7 @@ function App () {
        <Route path="/pages/my_books" exact><My_books/></Route>
        <Route path="/pages/register" exact><PostForm/></Route>
        <Route path="/pages/addbook" exact><Addbook/></Route>
-       <Route path="/item" exact><Item/></Route>
+       {/* <Route path="/item" exact><Item/></Route> */}
        <Route path="/recommend" exact><Reccomend/></Route>
        <Route path="/newbooks" exact><Newbooks/></Route>
        

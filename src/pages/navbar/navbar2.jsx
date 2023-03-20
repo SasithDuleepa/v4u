@@ -11,7 +11,7 @@ function Navibar2(props){
     const[user, setUser]= useState('login');
     const[userlink,setUserlink] = useState("/pages/login")
 
-    const fetchData = async () => {
+    const fetchData = () => {
       if(user!=='login'){setUserlink("/pages/user_info")}
       };
       useEffect(() => {
@@ -37,7 +37,7 @@ function Navibar2(props){
     <p href="/" className="site-title">V4U</p>
     
     <div id="setone">
-    <a href="../pages/home">Home</a>        
+    <a href="../">Home</a>        
     <a href="/top books">{props.top_books}</a>
     </div>
 

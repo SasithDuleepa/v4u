@@ -5,6 +5,8 @@ import Navibar2 from "../navbar/navbar2";
 import Newbooks from "../../component/new_books/newBooks";
 import Editors_choice from "../../component/editor-choice/editor_choice";
 import axios, { Axios } from 'axios'
+import Footer from "../../component/footer/footer";
+
 
 
 import './home.css'
@@ -33,14 +35,16 @@ function Home(){
         <div id="frame1">
       
         <img src={book1} className="book1"/>
+        <p className="quote">"I do believe<br/> something very magical can happen<br/> when you read a good book."</p>
+        <p className="quoter">-J.K.Rowling</p>
         
            
    
 
-        <div className='recc'>
+        {/* <div className='recc'>
         {recbookenable ? <Reccomend /> : null}
         
-        </div>
+        </div> */}
 
 
         
@@ -53,6 +57,7 @@ function Home(){
         <div className='recc'>
         <Editors_choice/>
         </div>
+        <Footer/>
         
 
         </div>
