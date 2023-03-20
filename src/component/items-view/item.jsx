@@ -32,7 +32,7 @@ function Item(props){
 
             <div className="contain">
                 <div id='space'> </div>
-                <img src={book} className="picture"/>
+                <img src={props.link} className="picture"/>
 
                 
                

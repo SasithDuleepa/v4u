@@ -9,11 +9,11 @@ import { BsFillBellFill,BsFillChatLeftTextFill,BsCart3,BsSearch } from "react-ic
 function Navibar2(props){
     const [cookieValue, setCookieValue] = useState({});
     const[user, setUser]= useState('login');
+    const[userlink,setUserlink] = useState("/pages/login")
 
-    // const fetchData = async () => {
-    //     const response = await axios.get('http://localhost:8080/user');
-    //     setUser(response.data);
-    //   };
+    const fetchData = async () => {
+      if(user!=='login'){setUserlink("/pages/user_info")}
+      };
       useEffect(() => {
         axios.get('http://localhost:8080/user', {
             withCredentials: true,
@@ -25,7 +25,9 @@ function Navibar2(props){
             console.log(response.data)
             setUser(response.data);
           });
+          fetchData()
       }, []); 
+      
 
 
 
@@ -52,7 +54,7 @@ function Navibar2(props){
     <a href="../cart"><BsCart3/></a>
     </li>
     <li>
-        <a href="/pages/login">{user}</a>
+        <a href={userlink}>{user}</a>
     </li>
     
     </div>

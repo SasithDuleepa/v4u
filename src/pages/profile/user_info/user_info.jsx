@@ -36,13 +36,7 @@ class User_info extends Component{
       render() {
         return(
         <div className='main_frame'>
-           <div>
-          <Router> 
-            <Switch>   
-               <Route  exact><Navibar/></Route>
-            </Switch>   
-         </Router>
-         </div>
+           
 
 
 

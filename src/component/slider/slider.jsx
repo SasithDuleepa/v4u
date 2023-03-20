@@ -22,29 +22,29 @@ export default class SimpleSlider extends Component {
         <Slider {...settings}>
           <div className='content'>
             
-          <Item title={this.props.t1}/>
+          <Item title={this.props.t1} link={this.props.img1}/>
           </div>
           <div className='content'>
-          <Item title={this.props.t2}/>
+          <Item title={this.props.t2} link={this.props.img2}/>
           </div>
           <div className='content'>
-          <Item title={this.props.t3}/>
+          <Item title={this.props.t3} link={this.props.img3} />
           </div>
           <div className='content'>
-          <Item title={this.props.t4}/>
+          <Item title={this.props.t4} link={this.props.img4}/>
           </div>
           <div className='content'>
-          <Item title={this.props.t5}/>
+          <Item title={this.props.t5} link={this.props.img5}/>
           </div>
           
           <div className='content'>
-          <Item title={this.props.t6}/>
+          <Item title={this.props.t6} link={this.props.img6}/>
           </div>
           <div className='content'>
-          <Item title={this.props.t7}/>
+          <Item title={this.props.t7} link={this.props.img7}/>
           </div>
           <div className='content'>
-          <Item title={this.props.t8}/>
+          <Item title={this.props.t8} link={this.props.img8}/>
           </div>
         </Slider>
       </div>

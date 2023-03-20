@@ -1,10 +1,8 @@
-import React from 'react'
+import React from 'react';
+import axios from 'axios';
 import { useState } from 'react';
-import Axios from 'axios';
 
-
-export default function Addbook() {
-    const url ="http://localhost:8080/book/save"
+const Addbook = () => {
     const [checkboxValues, setCheckboxValues] = useState({
         checkbox1: false,
         checkbox2: false,
@@ -13,66 +11,68 @@ export default function Addbook() {
         checkbox5: false,
         checkbox6: false,
       });
-
-      const [data, setData]= useState({
-        book_name:"",
+    const [data, setData]= useState({
+        book_name:"harry",
         author:"",
         catergory:"",
         description:"",
         pages:""
       })
-
       function handle(e){
         const newdata={...data}
         newdata[e.target.id]= e.target.value
         setData(newdata)
+       
         
     }
-    
-      function handleCheckboxChange(event) {
+    function handleCheckboxChange(event) {
         const { name, checked } = event.target;
         setCheckboxValues(prevValues => ({ ...prevValues, [name]: checked }));
+        
       }
 
+  const handleSubmit = async (event) => {
+    // console.log(checkboxValues)
+    event.preventDefault();
+  
 
-
-      
-    const submit = async (e)=>{  
-        console.log(data)
-        
-        e.preventDefault();
-        try{
-            const resp =await Axios.post(url,{            
-                book_name:data.book_name,
-                author:data.author,
-                catergory:checkboxValues,
-                description:data.description,
-                pages:data.pages
-            },
-            {
-              withCredentials: true,
-              
-              headers: {
-                
-                'Content-Type': 'application/json',
-              },
-            }
-            )
-           
-            console.log(resp.data)
-          
-        } catch(error){console.log(error);
-        }     
-        
-       
-       
-    }
+    const formData = new FormData();
+    formData.append('name', data.book_name);
+    formData.append('author', data.author);
+    formData.append('catergory', checkboxValues);
+    formData.append('description', data.description);
+    formData.append('page', data.pages);
     
+    formData.append('file', event.target.avatar.files[0]);
+
+    const rawData = {
+      age: 30,
+      gender: 'male'
+    };
+
+    formData.append('rawData', JSON.stringify(rawData));
+
+    try {
+      const response = await axios.post('http://localhost:8080/book/save', formData, {
+        withCredentials: true
+        // headers: {
+        //   'Content-Type': 'multipart/form-data'
+        // }
+      });
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
-    <div>
-        <form onSubmit={(e)=> submit(e)}>
-        <p>book Name :</p>
+    <>
+    <form onSubmit={handleSubmit}>
+      <input type="text" name="name" placeholder="Name" />
+      <input type="email" name="email" placeholder="Email" />
+      <input type="file" name="avatar" />
+
+      <p>book Name :</p>
         <input onChange={(e)=>handle(e)} type='text' id='book_name' value={data.book_name}/>
 
         <p>Author's Name :</p>
@@ -146,9 +146,17 @@ export default function Addbook() {
 
         <p>Number of Page :</p>
         <input onChange={(e)=>handle(e)} type='text' id='pages' value={data.pages}/>
-        
-        <button>submit</button>
-        </form>
-    </div>
-  )
-}
+
+
+
+
+
+
+
+      <button type="submit">Submit</button>
+    </form>
+    </>
+  );
+};
+
+export default Addbook;
