@@ -57,7 +57,7 @@ function Home(){
         <div className='recc'>
         <Editors_choice/>
         </div>
-        <Footer/>
+      
         
 
         </div>

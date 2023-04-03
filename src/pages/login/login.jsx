@@ -56,7 +56,7 @@ function Login() {
         ))
         console.log(resp.status);
           console.log(resp.data);
-          history.push("../v4u"); // Navigate to home page
+          history.push("../"); // Navigate to home page
           window.location.reload();
       
       }

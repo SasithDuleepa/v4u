@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { useState } from 'react';
+// import './addbook.css'
 
 const Addbook = () => {
     const [checkboxValues, setCheckboxValues] = useState({
@@ -39,7 +40,7 @@ const Addbook = () => {
     const formData = new FormData();
     formData.append('name', data.book_name);
     formData.append('author', data.author);
-    formData.append('catergory', checkboxValues);
+    formData.append('catergory', data.catergory);
     formData.append('description', data.description);
     formData.append('page', data.pages);
     
@@ -51,6 +52,7 @@ const Addbook = () => {
     };
 
     formData.append('rawData', JSON.stringify(rawData));
+    console.log(formData)
 
     try {
       const response = await axios.post('http://localhost:8080/book/save', formData, {
@@ -67,85 +69,28 @@ const Addbook = () => {
 
   return (
     <>
+    <div className='addbook'>
     <form onSubmit={handleSubmit}>
-      <input type="text" name="name" placeholder="Name" />
-      <input type="email" name="email" placeholder="Email" />
-      <input type="file" name="avatar" />
+      
+      
 
-      <p>book Name :</p>
+      <p className='input_lable'>book Name :</p>
         <input onChange={(e)=>handle(e)} type='text' id='book_name' value={data.book_name}/>
 
         <p>Author's Name :</p>
         <input onChange={(e)=>handle(e)} type='text' id='author' value={data.author}/>
+        <p>catergory :</p>
+        <input onChange={(e)=>handle(e)} type='text' id='catergory' value={data.catergory}/>
 
-        <div>
-      <label>
-        Checkbox 1:
-        <input
-          type="checkbox"
-          name="checkbox1"
-          checked={checkboxValues.checkbox1}
-          onChange={handleCheckboxChange}
-        />
-      </label>
-      <br />
-      <label>
-        Checkbox 2:
-        <input
-          type="checkbox"
-          name="checkbox2"
-          checked={checkboxValues.checkbox2}
-          onChange={handleCheckboxChange}
-        />
-      </label>
-      <br />
-      <label>
-        Checkbox 3:
-        <input
-          type="checkbox"
-          name="checkbox3"
-          checked={checkboxValues.checkbox3}
-          onChange={handleCheckboxChange}
-        />
-      </label>
-      <br />
-      <label>
-        Checkbox 4:
-        <input
-          type="checkbox"
-          name="checkbox4"
-          checked={checkboxValues.checkbox4}
-          onChange={handleCheckboxChange}
-        />
-      </label>
-      <br />
-      <label>
-        Checkbox 5:
-        <input
-          type="checkbox"
-          name="checkbox5"
-          checked={checkboxValues.checkbox5}
-          onChange={handleCheckboxChange}
-        />
-      </label>
-      <br />
-      <label>
-        Checkbox 6:
-        <input
-          type="checkbox"
-          name="checkbox6"
-          checked={checkboxValues.checkbox6}
-          onChange={handleCheckboxChange}
-        />
-      </label>
-    </div>
+   
 
 
         <p>Book Description :</p>
         <input onChange={(e)=>handle(e)} type='text' id='description' value={data.description}/>
 
         <p>Number of Page :</p>
-        <input onChange={(e)=>handle(e)} type='text' id='pages' value={data.pages}/>
+        <input onChange={(e)=>handle(e)} type='text' id='pages' value={data.pages}/><br/>
+        <input type="file" name="avatar" /> <br/>
 
 
 
@@ -155,6 +100,7 @@ const Addbook = () => {
 
       <button type="submit">Submit</button>
     </form>
+    </div>
     </>
   );
 };

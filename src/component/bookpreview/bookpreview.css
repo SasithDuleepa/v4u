@@ -1,0 +1,23 @@
+.prev_main{
+    width: 80%;
+    height: 30pc;
+    background-color: antiquewhite;
+    margin-bottom: 10px;
+}
+.prev-title{
+    color: black;
+    font-size: 2pc;
+    margin-left: 30%;
+}
+.prev-img{
+    width: 10%;
+}
+.prev-author{
+    color: #000;
+}
+.prev-catergory{
+    color: #000;
+}
+.prev_description{
+    color: #000;
+}

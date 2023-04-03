@@ -10,9 +10,11 @@ function Navibar2(props){
     const [cookieValue, setCookieValue] = useState({});
     const[user, setUser]= useState('login');
     const[userlink,setUserlink] = useState("/pages/login")
+    const[addbook,setAddbook]= useState('a')
+    const[addbooklink, setAddbooklink] = useState("/")
 
     const fetchData = () => {
-      if(user!=='login'){setUserlink("/pages/user_info")}
+      if(user!='login'){setUserlink("/pages/user_info")}
       };
       useEffect(() => {
         axios.get('http://localhost:8080/user', {
@@ -25,8 +27,17 @@ function Navibar2(props){
             console.log(response.data)
             setUser(response.data);
           });
-          fetchData()
-      }, []); 
+
+          if(user!='login'){
+            setUserlink("/pages/myprofile");
+            setAddbook('addbook');
+            setAddbooklink("/pages/addbook");
+      }
+      console.log()
+          fetchData(addbook)
+      }, [user]); 
+
+      
       
 
 
@@ -37,7 +48,7 @@ function Navibar2(props){
     <p href="/" className="site-title">V4U</p>
     
     <div id="setone">
-    <a href="../">Home</a>        
+    <a style={{margin:"0 0 0 50px"}} href="../">Home</a>        
     <a href="/top books">{props.top_books}</a>
     </div>
 
@@ -52,6 +63,9 @@ function Navibar2(props){
     </li>
     <li>
     <a href="../cart"><BsCart3/></a>
+    </li>
+    <li>
+      <a href={addbooklink}>{addbook}</a>
     </li>
     <li>
         <a href={userlink}>{user}</a>

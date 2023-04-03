@@ -1,17 +1,18 @@
 import './item.css'
 import React, { useState } from "react";
 import axios from 'axios';
-
+import { useHistory } from 'react-router-dom';
 
 
 import book from '../book.jpg';
 
-axios.defaults.baseURL = 'http://localhost:3005';
+
 
 
 
 
 function Item(props){
+    const history = useHistory();
     const[pic, setpic] = useState();
     const[title, settitle] = useState('sasasasass');
     const[link , setlink] = useState("");
@@ -22,8 +23,10 @@ function Item(props){
       };
 
     const clicked=()=>{
-        axios.post('/server/route', data)
-    }    
+        axios.post(`http://localhost:8080/book/book`, {data})
+        history.push(`/preview/${props.title}`);
+        window.location.reload(true)
+;    }    
 
 
     return(

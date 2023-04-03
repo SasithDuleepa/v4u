@@ -25,7 +25,8 @@ import Navibar2 from "./pages/navbar/navbar2";
 import background from "./background.jpg";
 import Addbook from "./pages/add book/addbook";
 import MyProfile from "./pages/profile/my_profile/myProfile";
-
+import Footer from "./component/footer/footer";
+import Bookpreview from "./component/bookpreview/bookpreview";
 function App () {
   return(
     <>
@@ -46,7 +47,7 @@ function App () {
        <Route path="/pages/my_books" exact><My_books/></Route>
        <Route path="/pages/register" exact><PostForm/></Route>
        <Route path="/pages/addbook" exact><Addbook/></Route>
-       {/* <Route path="/item" exact><Item/></Route> */}
+       <Route path="/preview/:title" exact><Bookpreview/></Route>
        <Route path="/recommend" exact><Reccomend/></Route>
        <Route path="/newbooks" exact><Newbooks/></Route>
        
@@ -55,7 +56,7 @@ function App () {
     </Router>
     
     
-  
+  <Footer/>
     </>
   
   );
