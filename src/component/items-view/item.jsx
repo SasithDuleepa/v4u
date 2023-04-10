@@ -42,9 +42,9 @@ function Item(props){
                 <br/>
                 
                 
-                <div  id='title-box' >
+                <div  className='title-box' >
                 {props.title} </div>
-                <div id='btnseemore' onClick={clicked}  >See more...</div>
+                <div className='btnseemore' onClick={clicked}  >See more...</div>
                 
                 
             </div>

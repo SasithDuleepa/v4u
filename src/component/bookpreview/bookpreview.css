@@ -2,15 +2,18 @@
     width: 80%;
     height: 30pc;
     background-color: antiquewhite;
-    margin-bottom: 10px;
+    margin:20px 10px 20px 10% ;
 }
 .prev-title{
     color: black;
-    font-size: 2pc;
+    font-size: 3vw;
+    position:relative;
     margin-left: 30%;
+    margin-top: 20px;
 }
 .prev-img{
-    width: 10%;
+    margin:7pc 0 0 2pc;
+    height: 20pc;
 }
 .prev-author{
     color: #000;
@@ -20,4 +23,13 @@
 }
 .prev_description{
     color: #000;
+}
+
+.prev-frame{
+    display: flex;
+    justify-content: space-around;
+}
+.prev-frame2{
+    margin-top: 5pc;
+    width: 30pc;
 }

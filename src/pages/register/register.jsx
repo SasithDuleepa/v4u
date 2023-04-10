@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import Axios from 'axios';
 import "./register.css"
 import regpic from "./regpic.png"
-import Navibar3 from '../navbar/navbar3';
+
 
 import { useHistory } from 'react-router-dom';
 

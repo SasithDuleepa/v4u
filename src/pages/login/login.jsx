@@ -7,7 +7,7 @@ import { Icon } from 'react-icons-kit'
 import {eyeOff} from 'react-icons-kit/feather/eyeOff'
 import {eye} from 'react-icons-kit/feather/eye'
 import singin from "./Signin.png"
-import Navibar3 from "../navbar/navbar3";
+
 import { useHistory } from 'react-router-dom';
 function Login() {
   const history = useHistory();

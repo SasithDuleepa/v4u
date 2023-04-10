@@ -1,5 +1,7 @@
 #frame1{
     display:contents;
+    position: relative;
+    width: 100%;
 }
 
 
@@ -48,21 +50,33 @@
     
 }
 .quote{
+    position: absolute;
+    top: 60px;
+    left: 60vw;
+
+ 
+
+  
+
+    
     text-align: right;
     color: rgba(255, 255, 255, 0.827);
-    font-size: 40px;
+    font-size: 2vw;
     font-weight: 500;
-    font-family: cursive;
-    padding-right: 10pc;
-    padding-bottom: 18pc;
-    margin-top: -18pc;
+    font-family: cursive;  
     font-style: italic;
 
 }
 .quoter{
-    font-size: 20px;
-    text-align: right;
-    margin-top: -7pc;
-    padding-bottom: 7pc;
-    margin-right: 11pc;
+   position: relative;
+    top: -10vw;
+    left: 83vw;
+    font-size: 1.5vw;
+   
+   
+}
+
+@media only screen and (max-width: 450px){
+    .quote{top:40px;}
+    .quoter{top: -60px;}
 }

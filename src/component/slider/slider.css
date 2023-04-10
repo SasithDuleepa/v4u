@@ -24,20 +24,22 @@
   .center .slick-center h3 {
     color: #e67e22;
     opacity: 1;
-    transform: scale(1.08);
+    transform: scale(2.08);
   }
   .center h3 {
     opacity: 0.8;
-    transition: all 300ms ease;
+    transition: all 500ms ease;
   }
   .content {
     padding: 20px;
-    margin: auto;
+    margin-left: 2pc;
     width: 90%;
   }
   .slick-slide .image {
     padding: 10px;
   }
+
+
   .slick-slide img {
     border: 5px solid #fff;
     display: block;

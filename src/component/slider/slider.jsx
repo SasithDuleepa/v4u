@@ -8,11 +8,11 @@ export default class SimpleSlider extends Component {
   render() {
     const settings = {
       autoplay:true,
-      autoplaySpeed:2000,
+      autoplaySpeed:3000,
       dots: false,
       infinite: true,
-      speed: 500,
-      slidesToShow: 6,
+      speed: 800,
+      slidesToShow: 5,
       slidesToScroll: 1,
       arrows:false,
     };

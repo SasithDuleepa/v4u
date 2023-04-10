@@ -8,7 +8,7 @@ import Social_profiles from '../social profiles/social_profiles';
 import My_books from '../my books/my_books';
 import MyProfile from '../my_profile/myProfile';
 
-import Navibar from "../../navbar/navbar";
+
 
 import {BrowserRouter as Router,Route, Switch} from "react-router-dom";
 

@@ -7,7 +7,7 @@ import {Switch} from "react-router-dom";
 
 import Login from "./pages/login/login";
 import Home from "./pages/home/home";
-import Navibar from "./pages/navbar/navbar";
+
 import Deleteacc from "./pages/deleteacc/deleteacc";
 import User_info from "./pages/profile/user_info/user_info";
 import Edit_profile from "./pages/profile/edit_profile/edit_profile";
@@ -37,7 +37,7 @@ function App () {
           
        <Route path="/pages/login" exact> <Login/>  </Route>
        <Route path="/" exact> <Home/>  </Route>
-       <Route path="/pages/navbar" exact><Navibar/></Route>
+       <Route path="/cart" exact> <Cart/>  </Route>
        <Route path="/pages/deleteacc" exact><Deleteacc/></Route>
        <Route path='/pages/myprofile' exact><MyProfile/></Route>
        <Route path="/pages/user_info" exact><User_info/></Route>
